@@ -66,7 +66,77 @@ ReactDOM.render(
 **Note: каждый цвет имеет оттенки от 50 до 800 что видно в подсказках редактора **
 
 ##Типография
-```js
+```javascript
 <Typography color="primary" variant="h1">Hello, there!</Typography>
 ```
+Цвет текст возьмёт из 
+```javascript
+palette: {
+      primary: {
+        main: purple[500],
+      },
+```
+### makeStyles
+[makestyles](https://material-ui.com/ru/styles/api/#makestyles-styles-options-hook)
+
+```javascript
+import {makeStyles} from "@material-ui/core/styles"
+
+const useStyles = makeStyles({
+  root:{
+    fontStyle: "oblique"
+  },
+  
+})
+
+function App() {
+  const classes = useStyles()
+  return (
+    <div className="App">
+      <Typography className={classes.root} color="primary" variant="h1">Hello, there!</Typography>
+      <header className="App-header">
+        <Button color="primary" variant="contained">Click</Button>
+      </header>
+    </div>
+  );
+}
+```
+Шрифт будет со стилем `fontStyle: "oblique"` - наклонный
+Можно создать новый компонент:
+```javascript
+
+const useStyles = makeStyles({
+  root:{
+    fontStyle: "oblique"
+  },
+  btn:{
+    borderRadius: 15,
+    color: 'tomato',
+    padding: '10px 30px',
+    marginTop: '10px'
+  }
+})
+
+
+function BtnStyled(){
+  const classes = useStyles();
+  return <Button className={classes.btn} >Styled Button</Button>
+}
+
+function App() {
+  const classes = useStyles()
+  return (
+    <div className="App">
+      <Typography className={classes.root} color="primary" variant="h1">Hello, there!</Typography>
+      <header className="App-header">
+        <Button color="primary" variant="contained">Click</Button>
+        <BtnStyled/>
+      </header>
+    </div>
+  );
+}
+
+```
+Получаю кнопку с заданными параметрами.
+
 
