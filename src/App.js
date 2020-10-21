@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Button>Click</Button>
+        <Button color="secondary" variant="contained">Click</Button>
       </header>
     </div>
   );
