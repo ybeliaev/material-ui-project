@@ -18,7 +18,7 @@ import {Button} from "@material-ui/core"
 
 В разделе `кастомизация` видно [дефолтные настройки](https://material-ui.com/ru/customization/default-theme/) 
 
-## Простое изменение стиля кнопки 
+### Простое изменение стиля кнопки 
 
 ```javascript
 function App() {  
@@ -38,6 +38,39 @@ function App() {
 }
 
 ```
+### Добавление иконок
+(Установка)[https://material-ui.com/ru/components/icons/]
+`yarn add @material-ui/icons`
+
+```javascript
+import SaveIcon from "@material-ui/icons/Save" // /Save - без этого не найдёт
+
+function App() {
+  
+  return (
+    <div className="App">      
+      <header className="App-header">
+        <Button
+          color="primary"
+          variant="contained"
+          startIcon={<SaveIcon/>}
+          >Click</Button>
+        <BtnStyled/>
+      </header>
+    </div>
+  );
+}
+
+```
+`SaveIcon` - название компонента данного вида иконки.
+`startIcon` - позиция в кнопке, в начале
+`startIcon` - в конце
+
+### Группы кнопок
+(ButtonGroup)[https://material-ui.com/ru/api/button-group/#buttongroup-api]
+Атрибуты для группы кнопок можно писать в компонент `ButtonGroup`
+
+
 ### Создаю свою тему
 [createmuitheme](https://material-ui.com/ru/customization/theming/#createmuitheme-options-args-theme)
 
