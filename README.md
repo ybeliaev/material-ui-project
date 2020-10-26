@@ -39,7 +39,7 @@ function App() {
 
 ```
 ### Добавление иконок
-(Установка)[https://material-ui.com/ru/components/icons/]
+[Установка](https://material-ui.com/ru/components/icons/)
 `yarn add @material-ui/icons`
 
 ```javascript
@@ -67,7 +67,7 @@ function App() {
 `startIcon` - в конце
 
 ### Группы кнопок
-(ButtonGroup)[https://material-ui.com/ru/api/button-group/#buttongroup-api]
+[ButtonGroup](https://material-ui.com/ru/api/button-group/#buttongroup-api)
 Атрибуты для группы кнопок можно писать в компонент `ButtonGroup`
 
 
