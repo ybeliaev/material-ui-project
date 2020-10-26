@@ -29,7 +29,7 @@ function App() {
     <div className="App">
       <Typography className={classes.root} color="primary" variant="h1">Hello, there!</Typography>
       <header className="App-header">
-        <Button color="primary" variant="contained">Click</Button>
+        <Button color="primary" variant="contained" >Click</Button>
         <BtnStyled/>
       </header>
     </div>

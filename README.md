@@ -18,6 +18,26 @@ import {Button} from "@material-ui/core"
 
 В разделе `кастомизация` видно [дефолтные настройки](https://material-ui.com/ru/customization/default-theme/) 
 
+## Простое изменение стиля кнопки 
+
+```javascript
+function App() {  
+  return (
+    <div className="App">      
+      <header className="App-header">
+        <Button
+         color="primary"
+         variant="contained"
+         style={{
+           fontSize: 10
+         }}
+         >Click</Button>        
+      </header>
+    </div>
+  );
+}
+
+```
 ### Создаю свою тему
 [createmuitheme](https://material-ui.com/ru/customization/theming/#createmuitheme-options-args-theme)
 
