@@ -1,47 +1,24 @@
-import React from 'react';
+import React from 'react'
 
-import './App.css';
+import { store } from './store'
+import { Provider } from 'react-redux'
 
-import {Button, Typography} from "@material-ui/core"
-import {makeStyles} from "@material-ui/core/styles"
-import SaveIcon from "@material-ui/icons/Save"
-import DeleteIcon from "@material-ui/icons/Delete"
+import { Basket } from './components/Basket'
+import { Goods } from './components/Goods'
+import { OrderOne } from './components/OrderOne'
+import { OrderTwo } from './components/OrderTwo'
 
-const useStyles = makeStyles({
-  root:{
-    fontStyle: "oblique"
-  },
-  btn:{
-    borderRadius: 15,
-    color: 'tomato',
-    padding: '10px 30px',
-    marginTop: '10px'
-  }
-})
+import './App.css'
 
-
-function BtnStyled(){
-  const classes = useStyles();
-  return <Button className={classes.btn} >Styled Button</Button>
+export default function App() {
+    return (
+        <Provider store={store}>
+            <div className="App-header">
+                <Basket />
+                <Goods />
+                <OrderOne />
+                <OrderTwo />
+            </div>
+        </Provider>
+    )
 }
-
-function App() {
-  const classes = useStyles()
-  
-  return (
-    <div className="App">
-      <Typography className={classes.root} color="primary" variant="h1">Hello, there!</Typography>
-      <header className="App-header">
-        <Button
-          
-          color="primary"
-          variant="contained"
-          startIcon={<SaveIcon/>}
-          >Click</Button>
-        <BtnStyled/>
-      </header>
-    </div>
-  );
-}
-
-export default App;
