@@ -28,7 +28,6 @@ export const OrderOne = () => {
     const classes = useStyles()
 
     const [count, setCount] = React.useState(1)
-    const [invisible, setInvisible] = React.useState(false)
 
     const dispatch = useDispatch()
 

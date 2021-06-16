@@ -29,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
 
 export const Goods = () => {
     const classes = useStyles()
+    const { order } = useSelector((state) => state.order)
 
     return (
         <Card className={classes.root}>
@@ -53,7 +54,7 @@ export const Goods = () => {
             />
             <CardContent>
                 <Typography variant="body2" color="textSecondary" component="p">
-                    Remaining pizzas: {80}
+                    Remaining pizzas: {order.pizzasCount}
                 </Typography>
             </CardContent>
         </Card>

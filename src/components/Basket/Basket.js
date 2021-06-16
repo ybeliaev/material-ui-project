@@ -17,9 +17,10 @@ const StyledBadge = withStyles((theme) => ({
 }))(Badge)
 
 export const Basket = () => {
+    const { order } = useSelector((state) => state.order)
     return (
         <IconButton aria-label="cart">
-            <StyledBadge badgeContent={80} color="secondary">
+            <StyledBadge badgeContent={order.pizzasCount} color="secondary">
                 <ShoppingCartIcon fontSize="large" />
             </StyledBadge>
         </IconButton>
