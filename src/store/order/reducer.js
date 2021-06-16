@@ -8,9 +8,19 @@ const initialState = {
 export const orderReducer = (state = initialState, action) => {
     switch (action.type) {
         case orderActionTypes.ADD_ORDER:
-            return { ...state, order: state.order.pizzasCount + action.payload }
+            return {
+                ...state,
+                order: {
+                    pizzasCount: state.order.pizzasCount + action.payload,
+                },
+            }
         case orderActionTypes.OUT_ORDER:
-            return { ...state, order: state.order.pizzasCount - action.payload }
+            return {
+                ...state,
+                order: {
+                    pizzasCount: state.order.pizzasCount - action.payload,
+                },
+            }
         default:
             return state
     }
